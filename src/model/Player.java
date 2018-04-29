@@ -20,8 +20,8 @@ public class Player {
 
     public Player(String name) {
         this.name = name;
-        cards = new ArrayList<>(Main.NUMBER_OF_CARDS);
-        for (int i = 0; i < Main.NUMBER_OF_CARDS; i++) {
+        cards = new ArrayList<>(Calculator.getInstance().NUMBER_OF_CARDS);
+        for (int i = 0; i < Calculator.getInstance().NUMBER_OF_CARDS; i++) {
             cards.add(i,false);
         }
     }
@@ -31,7 +31,7 @@ public class Player {
     }
 
     public boolean hasAll() {
-        for (int i = 0; i < Main.NUMBER_OF_CARDS; i++) {
+        for (int i = 0; i < Calculator.getInstance().NUMBER_OF_CARDS; i++) {
             if (cards.get(i) == false) {
                 return false;
             }
@@ -45,7 +45,7 @@ public class Player {
 
     public int numberCards() {
         int num=0;
-        for (int i = 0; i < Main.NUMBER_OF_CARDS; i++) {
+        for (int i = 0; i < Calculator.getInstance().NUMBER_OF_CARDS; i++) {
             if (cards.get(i) == true) {
                 num++;
             }
